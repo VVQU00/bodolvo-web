@@ -66,20 +66,144 @@ export default function Home() {
             </span>
           </Link>
 
+          {/* DESKTOP NAV */}
           <nav className="hidden items-center gap-9 text-[13px] text-white/45 md:flex">
             <Link href="/" className="text-white">
               Home
             </Link>
 
-            <Link href="/products" className="transition hover:text-white">
+            <Link
+              href="/products"
+              className="transition hover:text-white"
+            >
               Products
             </Link>
 
-            <Link href="/about" className="transition hover:text-white">
+            {/* APPS DROPDOWN */}
+            <div className="group relative">
+              <button
+                type="button"
+                className="flex h-[74px] items-center gap-2 transition hover:text-white focus:text-white focus:outline-none"
+              >
+                Apps
+
+                <svg
+                  viewBox="0 0 12 8"
+                  fill="none"
+                  className="h-2 w-3 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M1 1.5L6 6.5L11 1.5"
+                    stroke="currentColor"
+                    strokeWidth="1.3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+
+              {/* DROPDOWN BRIDGE */}
+              <div className="absolute left-1/2 top-[64px] h-5 w-[330px] -translate-x-1/2" />
+
+              {/* DROPDOWN */}
+              <div
+                className="
+                  invisible absolute left-1/2 top-[68px] w-[330px]
+                  -translate-x-1/2 translate-y-2
+                  rounded-[24px] border border-white/[0.09]
+                  bg-[#0d1015]/95 p-2.5
+                  opacity-0
+                  shadow-[0_30px_80px_rgba(0,0,0,0.55)]
+                  backdrop-blur-2xl
+                  transition-all duration-200
+                  group-hover:visible
+                  group-hover:translate-y-0
+                  group-hover:opacity-100
+                  group-focus-within:visible
+                  group-focus-within:translate-y-0
+                  group-focus-within:opacity-100
+                "
+              >
+                <div className="px-3 pb-2 pt-2">
+                  <p className="text-[9px] font-semibold uppercase tracking-[0.2em] text-white/20">
+                    Bodolvo Apps
+                  </p>
+                </div>
+
+                <Link
+                  href="/apps/calculator"
+                  className="group/app flex items-center gap-4 rounded-[18px] border border-transparent p-4 transition duration-200 hover:border-white/[0.07] hover:bg-white/[0.045]"
+                >
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] border border-violet-200/[0.12] bg-violet-400/[0.06]">
+                    <span className="text-sm font-semibold text-violet-100/75">
+                      C
+                    </span>
+                  </div>
+
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center justify-between gap-4">
+                      <p className="text-[13px] font-medium text-white/85">
+                        Calculator
+                      </p>
+
+                      <span className="text-sm text-white/18 transition duration-200 group-hover/app:translate-x-1 group-hover/app:text-white/55">
+                        →
+                      </span>
+                    </div>
+
+                    <p className="mt-1.5 text-[10px] leading-4 text-white/30">
+                      Math, money, science, conversions & more.
+                    </p>
+                  </div>
+                </Link>
+
+                <Link
+                  href="/apps/qr-barcode"
+                  className="group/app flex items-center gap-4 rounded-[18px] border border-transparent p-4 transition duration-200 hover:border-white/[0.07] hover:bg-white/[0.045]"
+                >
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] border border-blue-200/[0.12] bg-blue-400/[0.06]">
+                    <span className="text-sm font-semibold text-blue-100/75">
+                      Q
+                    </span>
+                  </div>
+
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center justify-between gap-4">
+                      <p className="text-[13px] font-medium text-white/85">
+                        QR & Barcode
+                      </p>
+
+                      <span className="text-sm text-white/18 transition duration-200 group-hover/app:translate-x-1 group-hover/app:text-white/55">
+                        →
+                      </span>
+                    </div>
+
+                    <p className="mt-1.5 text-[10px] leading-4 text-white/30">
+                      Create, scan, save & share QR codes and barcodes.
+                    </p>
+                  </div>
+                </Link>
+
+                <div className="mt-1 border-t border-white/[0.05] px-3 py-3">
+                  <p className="text-[9px] leading-4 text-white/18">
+                    More Bodolvo apps will appear here.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <Link
+              href="/about"
+              className="transition hover:text-white"
+            >
               About
             </Link>
 
-            <Link href="/support" className="transition hover:text-white">
+            <Link
+              href="/support"
+              className="transition hover:text-white"
+            >
               Support
             </Link>
           </nav>
@@ -209,7 +333,9 @@ export default function Home() {
                           {title}
                         </p>
 
-                        <p className="mt-2 text-sm text-white/72">{subtitle}</p>
+                        <p className="mt-2 text-sm text-white/72">
+                          {subtitle}
+                        </p>
                       </div>
                     </div>
                   ))}
@@ -281,12 +407,23 @@ export default function Home() {
               preserveAspectRatio="none"
             >
               <defs>
-                <linearGradient id="bodolvoLine" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stopColor="rgba(255,255,255,0.03)" />
+                <linearGradient
+                  id="bodolvoLine"
+                  x1="0"
+                  y1="0"
+                  x2="1"
+                  y2="1"
+                >
+                  <stop
+                    offset="0%"
+                    stopColor="rgba(255,255,255,0.03)"
+                  />
+
                   <stop
                     offset="50%"
                     stopColor="rgba(196,181,253,0.16)"
                   />
+
                   <stop
                     offset="100%"
                     stopColor="rgba(255,255,255,0.03)"
@@ -418,7 +555,9 @@ export default function Home() {
 
               <h2 className="mt-5 text-4xl font-medium tracking-[-0.045em] sm:text-5xl">
                 Different spaces.
-                <span className="block text-white/35">One Bodolvo.</span>
+                <span className="block text-white/35">
+                  One Bodolvo.
+                </span>
               </h2>
             </div>
 
@@ -455,7 +594,9 @@ export default function Home() {
                       {product.short}
                     </p>
 
-                    <h3 className="text-xl font-medium">{product.title}</h3>
+                    <h3 className="text-xl font-medium">
+                      {product.title}
+                    </h3>
 
                     <p className="mt-3 max-w-sm text-sm leading-7 text-white/38">
                       {product.description}
@@ -540,7 +681,10 @@ export default function Home() {
       <footer className="border-t border-white/[0.06] bg-[#080a0d] px-6 py-12">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col justify-between gap-10 md:flex-row md:items-center">
-            <Link href="/" className="flex items-center gap-3">
+            <Link
+              href="/"
+              className="flex items-center gap-3"
+            >
               <div className="flex h-8 w-8 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.03] text-[10px]">
                 B
               </div>
@@ -551,31 +695,59 @@ export default function Home() {
             </Link>
 
             <div className="flex flex-wrap gap-7 text-xs text-white/30">
-              <Link href="/" className="text-white/60">
+              <Link
+                href="/"
+                className="text-white/60"
+              >
                 Home
               </Link>
 
-              <Link href="/products" className="transition hover:text-white">
+              <Link
+                href="/products"
+                className="transition hover:text-white"
+              >
                 Products
               </Link>
 
-              <Link href="/live" className="transition hover:text-white">
+              <Link
+                href="/apps/calculator"
+                className="transition hover:text-white"
+              >
+                Apps
+              </Link>
+
+              <Link
+                href="/live"
+                className="transition hover:text-white"
+              >
                 Live
               </Link>
 
-              <Link href="/about" className="transition hover:text-white">
+              <Link
+                href="/about"
+                className="transition hover:text-white"
+              >
                 About
               </Link>
 
-              <Link href="/support" className="transition hover:text-white">
+              <Link
+                href="/support"
+                className="transition hover:text-white"
+              >
                 Support
               </Link>
 
-              <Link href="/privacy" className="transition hover:text-white">
+              <Link
+                href="/privacy"
+                className="transition hover:text-white"
+              >
                 Privacy
               </Link>
 
-              <Link href="/terms" className="transition hover:text-white">
+              <Link
+                href="/terms"
+                className="transition hover:text-white"
+              >
                 Terms
               </Link>
             </div>
@@ -620,7 +792,9 @@ function WorldNode({
       </div>
 
       <div className="mt-12">
-        <h3 className="text-[15px] font-medium text-white/82">{title}</h3>
+        <h3 className="text-[15px] font-medium text-white/82">
+          {title}
+        </h3>
 
         <p className="mt-2 max-w-[240px] text-xs leading-6 text-white/28">
           {text}
