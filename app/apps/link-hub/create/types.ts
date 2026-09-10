@@ -93,6 +93,19 @@ export type BaseBlock = {
   borderWidth?: number;
   borderColor?: string;
   shadow?: ShadowStrength;
+
+  /*
+   * Shared optional destination fields.
+   *
+   * These intentionally live on BaseBlock so destination-tracking code can
+   * safely inspect url / purchaseUrl / fileUrl across the discriminated
+   * Block union without TypeScript narrowing the block to never or unknown.
+   * Individual block types below still keep their stricter fields where
+   * appropriate (for example LinkBlock requires url).
+   */
+  url?: string;
+  purchaseUrl?: string;
+  fileUrl?: string;
 };
 
 export type LinkBlock = BaseBlock & {

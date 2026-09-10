@@ -1586,13 +1586,7 @@ export default function LinkHubRenderer({
 
                         trackBlockClick(
                           block,
-                          "url" in block
-                            ? block.url
-                            : "purchaseUrl" in block
-                              ? block.purchaseUrl
-                              : "fileUrl" in block
-                                ? block.fileUrl
-                                : null
+                          block.url || null
                         );
                       }}
                         className="flex items-center justify-center self-center"
@@ -1650,11 +1644,7 @@ export default function LinkHubRenderer({
 
                         trackBlockClick(
                           block,
-                          "url" in block
-                            ? block.url
-                            : "purchaseUrl" in block
-                              ? block.purchaseUrl
-                              : null
+                          block.url || null
                         );
                       }}
                       className={`flex items-center gap-4 p-4 text-left ${
@@ -1924,11 +1914,7 @@ export default function LinkHubRenderer({
 
                         trackBlockClick(
                           block,
-                          "url" in block
-                            ? block.url
-                            : "purchaseUrl" in block
-                              ? block.purchaseUrl
-                              : null
+                          block.fileUrl || null
                         );
                       }}
                       className="flex items-center gap-4 p-4 text-left"
@@ -2019,13 +2005,7 @@ export default function LinkHubRenderer({
 
                         trackBlockClick(
                           block,
-                          "url" in block
-                            ? block.url
-                            : "purchaseUrl" in block
-                              ? block.purchaseUrl
-                              : "fileUrl" in block
-                                ? block.fileUrl
-                                : null
+                          block.purchaseUrl || null
                         );
                       }}
                         className="flex items-center gap-4 p-4 text-left"
@@ -2105,11 +2085,7 @@ export default function LinkHubRenderer({
 
                         trackBlockClick(
                           block,
-                          "url" in block
-                            ? block.url
-                            : "purchaseUrl" in block
-                              ? block.purchaseUrl
-                              : null
+                          block.purchaseUrl || null
                         );
                       }}
                       className="overflow-hidden text-left"
@@ -2294,11 +2270,7 @@ export default function LinkHubRenderer({
 
                         trackBlockClick(
                           block,
-                          "url" in block
-                            ? block.url
-                            : "purchaseUrl" in block
-                              ? block.purchaseUrl
-                              : null
+                          block.url || null
                         );
                       }}
                       className="overflow-hidden text-left transition hover:-translate-y-0.5"
@@ -2374,11 +2346,7 @@ export default function LinkHubRenderer({
 
                         trackBlockClick(
                           block,
-                          "url" in block
-                            ? block.url
-                            : "purchaseUrl" in block
-                              ? block.purchaseUrl
-                              : null
+                          block.url || null
                         );
                       }}
                       className="flex items-center justify-between border-b p-2 text-left"
@@ -2433,13 +2401,7 @@ export default function LinkHubRenderer({
 
                         trackBlockClick(
                           block,
-                          "url" in block
-                            ? block.url
-                            : "purchaseUrl" in block
-                              ? block.purchaseUrl
-                              : "fileUrl" in block
-                                ? block.fileUrl
-                                : null
+                          block.url || null
                         );
                       }}
                     className="group flex items-center gap-4 p-4 text-left transition hover:-translate-y-0.5"
