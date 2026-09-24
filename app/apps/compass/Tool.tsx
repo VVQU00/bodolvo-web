@@ -21,7 +21,7 @@ export function Tool() {
     let received = false;
     const onOrientation = (event: DeviceOrientationEvent) => {
       const ios = event as IOSOrientation;
-      if (typeof ios.webkitCompassHeading === "number" && Number.isFinite(ios.webkitCompassHeading)) {
+      if (typeof ios.webkitCompassHeading === "number" && Number.isFinite(ios.webkitCompassHeading) && ios.webkitCompassHeading >= 0) {
         received = true;
         setHeading(normalize(ios.webkitCompassHeading)); setHeadingType("compass");
         setAccuracy(typeof ios.webkitCompassAccuracy === "number" && Number.isFinite(ios.webkitCompassAccuracy) ? ios.webkitCompassAccuracy : null);

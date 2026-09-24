@@ -1,3 +1,4 @@
+import { authenticatedUser, unauthorized, adminHeaders } from "@/lib/linkHubAuth";
 import { NextResponse } from "next/server";
 
 type PublishBody = {
@@ -21,6 +22,8 @@ function normalizeUsername(value: string) {
 }
 
 export async function POST(request: Request) {
+  const userId = await authenticatedUser(request);
+  if (!userId) return unauthorized();
   try {
     const body = (await request.json()) as PublishBody;
 
@@ -92,25 +95,28 @@ export async function POST(request: Request) {
       },
     };
 
-    const publishedAt =
-      new Date().toISOString();
-
+    const publishedAt = new Date().toISOString();
+    // A username may be created by its first owner, never adopted or overwritten.
+    // On an existing username, a conditional update permits its owner only.
+    const existingResponse = await fetch(
+      `${supabaseUrl}/rest/v1/link_hubs?username=eq.${encodeURIComponent(username)}&select=owner_id&limit=1`,
+      { headers: adminHeaders(secretKey), cache: "no-store" }
+    );
+    if (!existingResponse.ok) return NextResponse.json({ok:false,error:"Could not verify profile ownership. Run the Link Hub database migration."},{status:503});
+    const existing = await existingResponse.json() as Array<{owner_id?: string | null}>;
+    if (existing.length && existing[0].owner_id !== userId) {
+      return NextResponse.json({ok:false,error:"This username is unavailable or belongs to another account."},{status:409});
+    }
     const response = await fetch(
-      `${supabaseUrl}/rest/v1/link_hubs?on_conflict=username`,
+      existing.length
+        ? `${supabaseUrl}/rest/v1/link_hubs?username=eq.${encodeURIComponent(username)}&owner_id=eq.${encodeURIComponent(userId)}`
+        : `${supabaseUrl}/rest/v1/link_hubs`,
       {
-        method: "POST",
-        headers: {
-          apikey: secretKey,
-          Authorization: `Bearer ${secretKey}`,
-          "Content-Type": "application/json",
-          Prefer:
-            "resolution=merge-duplicates,return=representation",
-        },
+        method: existing.length ? "PATCH" : "POST",
+        headers: { ...adminHeaders(secretKey), Prefer: "return=representation" },
         body: JSON.stringify({
-          username,
-          state: normalizedState,
-          published_at: publishedAt,
-          updated_at: publishedAt,
+          ...(existing.length ? {} : { username, owner_id: userId }),
+          state: normalizedState, published_at: publishedAt, updated_at: publishedAt,
         }),
         cache: "no-store",
       }
@@ -132,7 +138,7 @@ export async function POST(request: Request) {
           error: "Could not publish this Link Hub.",
         },
         {
-          status: 500,
+          status: response.status === 409 ? 409 : 500,
         }
       );
     }

@@ -1,3 +1,4 @@
+import { authenticatedUser, unauthorized, ownedProfile } from "@/lib/linkHubAuth";
 import { NextResponse } from "next/server";
 
 type LinkHubEventRow = {
@@ -80,6 +81,12 @@ export async function GET(
           status: 400,
         }
       );
+    }
+
+    const userId = await authenticatedUser(request);
+    if (!userId) return unauthorized();
+    if (!(await ownedProfile(username, userId))) {
+      return NextResponse.json({ok:false,error:"Only the profile owner can view analytics."},{status:403});
     }
 
     const url = new URL(request.url);

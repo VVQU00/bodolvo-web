@@ -1,3 +1,5 @@
+import HubAccount from "./HubAccount";
+import { hubHeaders } from "./hubSession";
 "use client";
 
 import {
@@ -527,6 +529,7 @@ export default function CreateLinkHubPage() {
           {
             method: "GET",
             cache: "no-store",
+            headers: hubHeaders(),
           }
         );
 
@@ -1105,6 +1108,7 @@ export default function CreateLinkHubPage() {
         {
           method: "POST",
           body: formData,
+          headers: hubHeaders(),
         }
       );
 
@@ -1195,6 +1199,7 @@ export default function CreateLinkHubPage() {
           headers: {
             "Content-Type":
               "application/json",
+            ...hubHeaders(),
           },
           body: JSON.stringify({
             state: editor,
@@ -1274,6 +1279,7 @@ export default function CreateLinkHubPage() {
 
   return (
     <main className="min-h-screen bg-[#E8E2D8] text-[#131313]">
+      <HubAccount />
       <header className="sticky top-0 z-50 border-b border-black/10 bg-[#F8F4EC]/95 backdrop-blur-xl">
         <div className="flex min-h-[72px] items-center justify-between gap-3 px-5">
           <div className="flex min-w-0 items-center gap-3">

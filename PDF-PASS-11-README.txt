@@ -1,0 +1,1 @@
+PDF Toolkit Pass 11: adds visual signature image placement and text watermarking to existing Pass 10. This is an overlay, NOT a certificate-backed digital signature. Password encryption, protected PDF unlocking and OCR remain unsupported. Install over Pass 10. Run npm run build and test browser functions before committing.

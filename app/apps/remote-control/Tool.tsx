@@ -69,7 +69,7 @@ export function Tool() {
     if (!data || typeof data !== "object" || !("kind" in data)) return;
     if (modeRef.current === "remote" && data.kind === "state" && "state" in data && data.state && typeof data.state === "object") {
      const s = data.state as Playback;
-     if (typeof s.title === "string" && typeof s.current === "number" && typeof s.duration === "number" && typeof s.volume === "number" && typeof s.playing === "boolean" && typeof s.muted === "boolean") setPlayback(s);
+     if (typeof s.title === "string" && s.title.length <= 120 && typeof s.current === "number" && Number.isFinite(s.current) && s.current >= 0 && typeof s.duration === "number" && Number.isFinite(s.duration) && s.duration >= 0 && typeof s.volume === "number" && Number.isFinite(s.volume) && s.volume >= 0 && s.volume <= 1 && typeof s.playing === "boolean" && typeof s.muted === "boolean") setPlayback(s);
      return;
     }
     if (modeRef.current !== "receiver") return;

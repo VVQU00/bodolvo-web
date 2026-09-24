@@ -1,3 +1,4 @@
+import { hubHeaders } from "./hubSession";
 "use client";
 
 import {
@@ -158,6 +159,7 @@ export default function MediaUploader({
           {
             method: "POST",
             body: formData,
+            headers: hubHeaders(),
           }
         );
 

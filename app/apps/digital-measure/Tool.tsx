@@ -13,6 +13,7 @@ const styles = {
 export function Tool() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const streamRef = useRef<MediaStream | null>(null);
+  const requestRef = useRef(0);
   const fileRef = useRef<HTMLInputElement>(null);
   const [photo, setPhoto] = useState<string | null>(null);
   const [size, setSize] = useState({ width: 1, height: 1 });
@@ -26,20 +27,24 @@ export function Tool() {
   const [busy, setBusy] = useState(false);
 
   function stopCamera() {
+    requestRef.current += 1;
     streamRef.current?.getTracks().forEach((track) => track.stop());
     streamRef.current = null;
     setCameraOn(false);
     if (videoRef.current) videoRef.current.srcObject = null;
   }
-  useEffect(() => () => streamRef.current?.getTracks().forEach((track) => track.stop()), []);
+  useEffect(() => () => { requestRef.current += 1; streamRef.current?.getTracks().forEach((track) => track.stop()); }, []);
 
   async function startCamera() {
     setError("");
     setBusy(true);
+    let request = requestRef.current;
     try {
       if (!navigator.mediaDevices?.getUserMedia) throw new Error("Camera not supported in this browser. Upload a photo instead.");
       stopCamera();
+      request = requestRef.current;
       const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: { ideal: "environment" } }, audio: false });
+      if (request !== requestRef.current) { stream.getTracks().forEach((track) => track.stop()); return; }
       streamRef.current = stream;
       if (videoRef.current) {
         videoRef.current.srcObject = stream;
@@ -47,6 +52,7 @@ export function Tool() {
       }
       setCameraOn(true);
     } catch (cause) {
+      if (request !== requestRef.current) return;
       stopCamera();
       setError(cause instanceof Error ? cause.message : "Camera unavailable. Allow camera permission or upload a photo.");
     } finally {

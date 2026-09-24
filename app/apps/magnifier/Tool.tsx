@@ -13,6 +13,7 @@ export function Tool() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const fileRef = useRef<HTMLInputElement>(null);
   const streamRef = useRef<MediaStream | null>(null);
+  const requestRef = useRef(0);
   const photoRef = useRef<HTMLImageElement | null>(null);
   const pointerRef = useRef<{ x: number; y: number; panX: number; panY: number } | null>(null);
   const [mode, setMode] = useState<Mode>("idle");
@@ -28,6 +29,7 @@ export function Tool() {
   const [message, setMessage] = useState("Open your camera or choose a photo to get started.");
 
   function stopCamera() {
+    requestRef.current += 1;
     streamRef.current?.getTracks().forEach((track) => track.stop());
     streamRef.current = null;
     if (videoRef.current) videoRef.current.srcObject = null;
@@ -37,6 +39,7 @@ export function Tool() {
 
   useEffect(() => {
     return () => {
+      requestRef.current += 1;
       streamRef.current?.getTracks().forEach((track) => track.stop());
     };
   }, []);
@@ -44,6 +47,7 @@ export function Tool() {
   async function openCamera(side: "environment" | "user" = cameraSide) {
     setError("");
     stopCamera();
+    const request = requestRef.current;
     photoRef.current = null;
     if (!navigator.mediaDevices?.getUserMedia) {
       setMode("idle");
@@ -55,6 +59,7 @@ export function Tool() {
         video: { facingMode: { ideal: side }, width: { ideal: 1920 }, height: { ideal: 1080 } },
         audio: false,
       });
+      if (request !== requestRef.current) { stream.getTracks().forEach((track) => track.stop()); return; }
       streamRef.current = stream;
       if (videoRef.current) {
         videoRef.current.srcObject = stream;
@@ -68,6 +73,7 @@ export function Tool() {
       setPan({ x: 0, y: 0 });
       setMessage("Live view. Zoom in, adjust the image, or freeze a frame to inspect it.");
     } catch {
+      if (request !== requestRef.current) return;
       stopCamera();
       setMode("idle");
       setError("Could not open the camera. Check camera permission and whether another app is using it, or upload a photo instead.");
@@ -115,6 +121,7 @@ export function Tool() {
       return;
     }
     setError("");
+    if (file.size > 20 * 1024 * 1024) { setError("Choose a photo smaller than 20 MB."); return; }
     const blobUrl = URL.createObjectURL(file);
     const image = new Image();
     image.onload = () => {

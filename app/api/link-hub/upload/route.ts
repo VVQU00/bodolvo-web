@@ -1,3 +1,4 @@
+import { authenticatedUser, unauthorized, ownedProfile } from "@/lib/linkHubAuth";
 import { NextResponse } from "next/server";
 
 export const runtime = "nodejs";
@@ -50,6 +51,8 @@ function encodeStoragePath(path: string) {
 }
 
 export async function POST(request: Request) {
+  const userId = await authenticatedUser(request);
+  if (!userId) return unauthorized();
   try {
     const formData = await request.formData();
 
@@ -161,6 +164,10 @@ export async function POST(request: Request) {
           status: 503,
         }
       );
+    }
+
+    if (!(await ownedProfile(username, userId))) {
+      return NextResponse.json({ ok:false, error:"Publish your own Link Hub before uploading media." }, {status:403});
     }
 
     const extension =
