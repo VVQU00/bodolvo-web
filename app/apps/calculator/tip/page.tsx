@@ -38,7 +38,8 @@ export default function TipCalculatorPage() {
     Number.isFinite(tipValue) &&
     tipValue >= 0 &&
     Number.isFinite(peopleValue) &&
-    peopleValue >= 1;
+    peopleValue >= 1 &&
+    Number.isInteger(peopleValue);
 
   const results = useMemo(() => {
     if (!isValid) {

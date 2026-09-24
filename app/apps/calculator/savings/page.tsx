@@ -63,6 +63,7 @@ export default function SavingsCalculatorPage() {
     currentValue >= 0 &&
     Number.isFinite(monthsValue) &&
     monthsValue > 0 &&
+    Number.isInteger(monthsValue) &&
     currentValue < goalValue;
 
   const result = useMemo(() => {

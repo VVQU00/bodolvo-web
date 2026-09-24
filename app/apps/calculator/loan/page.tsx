@@ -48,7 +48,8 @@ export default function LoanCalculatorPage() {
     rateValue >= 0 &&
     Number.isFinite(termValue) &&
     termValue > 0 &&
-    months > 0;
+    months > 0 &&
+    Number.isInteger(months);
 
   const results = useMemo(() => {
     if (!isValid) {
