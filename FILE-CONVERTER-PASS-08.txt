@@ -1,0 +1,11 @@
+Bodolvo File Converter — V1 Pass 08
+
+Changed app/apps/file-converter/Tool.tsx only. Keeps existing PNG/JPG/WebP conversion and download features.
+- Clear readable form, buttons and results in unified light interface.
+- Rejects empty files and unsupported declared MIME types.
+- Shows which input files failed while preserving successful downloads.
+- Prevents identical download names for inputs with duplicate names.
+
+This pass does not add document/audio/video conversion. Production build and browser testing must be done in the user's local project before deployment.
+
+Install: Copy the contents of the bodolvo-web folder from this ZIP into C:\Users\Grimmy\bodolvo-web, replacing files. Then run npm run build.
