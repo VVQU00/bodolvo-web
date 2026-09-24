@@ -111,3 +111,50 @@ body { margin: 0; font-family: Arial, Helvetica, sans-serif; }
 .qrBarcodeApp :is(input,textarea,select) { background: #fff !important; color: #171717 !important; }
 .qrBarcodeApp :is(button,a,input,select,textarea):focus-visible { outline: 2px solid #171717; outline-offset: 2px; }
 @media (max-width: 600px) { .calculator-directory { padding-block: 20px 38px; } }
+
+
+/* QR & Barcode legibility repair: only the generator screen, not camera/scanner overlays. */
+.qrBarcodeApp .safeArea,
+.qrBarcodeApp .safeArea .scrollContent,
+.qrBarcodeApp .safeArea .pageShell,
+.qrBarcodeApp .safeArea .pageShell :is(div, section, article, header, footer) {
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+.qrBarcodeApp .safeArea { background: #fff !important; }
+.qrBarcodeApp .safeArea .pageShell :is(h1,h2,h3,h4,p,label,small,strong,span,li) {
+  color: #171717 !important;
+  text-shadow: none !important;
+}
+.qrBarcodeApp .safeArea .pageShell :is(input,textarea,select) {
+  color: #171717 !important;
+  background: #fff !important;
+  border: 1px solid #aaa !important;
+  opacity: 1 !important;
+}
+.qrBarcodeApp .safeArea .pageShell :is(input,textarea)::placeholder { color: #555 !important; opacity: 1; }
+.qrBarcodeApp .safeArea .pageShell button {
+  color: #171717 !important;
+  background: #fff !important;
+  background-image: none !important;
+  border: 1px solid #aaa !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  opacity: 1;
+}
+.qrBarcodeApp .safeArea .pageShell button :is(span,svg) { color: inherit !important; }
+.qrBarcodeApp .safeArea .pageShell button:is(:hover,:focus-visible) { border-color: #171717 !important; }
+.qrBarcodeApp .safeArea .pageShell button:disabled { opacity: .55 !important; cursor: not-allowed; }
+.qrBarcodeApp .safeArea .pageShell :is(button.primaryWrapper,button.primaryWrapper .primaryButton,button.selected,button.active,button[class*="Active"],button[class*="Selected"]) {
+  background: #171717 !important;
+  color: #fff !important;
+  border-color: #171717 !important;
+}
+.qrBarcodeApp .safeArea .pageShell button.primaryWrapper *,
+.qrBarcodeApp .safeArea .pageShell :is(button.selected,button.active,button[class*="Active"],button[class*="Selected"]) * { color: #fff !important; }
+.qrBarcodeApp .safeArea .pageShell button.primaryWrapper .primaryButton { background: transparent !important; }
+.qrBarcodeApp .safeArea .pageShell :is(canvas,svg,img,video) { background-image: initial; }
+.qrBarcodeApp .safeArea .pageShell :is(.previewWrapper,[class*="preview"],[class*="Preview"]) { border-color: #d9d9d9 !important; }
+.qrBarcodeApp .safeArea .pageShell a { color: #171717 !important; }
+.qrBarcodeApp .safeArea .pageShell :is(button,a,input,select,textarea):focus-visible { outline: 2px solid #171717 !important; outline-offset: 2px; }

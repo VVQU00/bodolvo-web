@@ -3,6 +3,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import jsQR from "jsqr";
 import {
   useCallback,
   useEffect,
@@ -101,6 +102,7 @@ export default function ScannerScreen() {
 
   const detectorRef =
     useRef<BarcodeDetectorInstance | null>(null);
+  const frameCanvasRef = useRef<HTMLCanvasElement | null>(null);
 
   const scanningRef = useRef(false);
 
@@ -261,22 +263,27 @@ export default function ScannerScreen() {
       return;
     }
 
-    if (!window.BarcodeDetector) {
-      setCameraError(
-        "Live barcode scanning is not supported by this browser.",
-      );
-
-      return;
+    // BarcodeDetector is absent on Safari and some mobile browsers.
+    // Keep QR scanning available there through the existing jsQR dependency.
+    detectorRef.current = null;
+    if (window.BarcodeDetector) {
+      try {
+        detectorRef.current = new window.BarcodeDetector({
+          formats: BARCODE_FORMATS,
+        });
+      } catch {
+        try {
+          detectorRef.current = new window.BarcodeDetector();
+        } catch {
+          detectorRef.current = null;
+        }
+      }
     }
-
-    try {
-      detectorRef.current = new window.BarcodeDetector({
-        formats: BARCODE_FORMATS,
-      });
-    } catch {
-      detectorRef.current =
-        new window.BarcodeDetector();
-    }
+    setCameraError(
+      detectorRef.current
+        ? null
+        : "QR scanning is available. Barcode scanning requires a browser with barcode detection support.",
+    );
 
     let animationFrame = 0;
     let active = true;
@@ -291,21 +298,43 @@ export default function ScannerScreen() {
 
       if (
         video &&
-        detector &&
         video.readyState >= 2 &&
         !scanningRef.current
       ) {
         scanningRef.current = true;
 
         try {
-          const results =
-            await detector.detect(video);
-
-          const result = results[0];
+          let result: DetectedBarcode | undefined;
+          if (detector) {
+            const results = await detector.detect(video);
+            result = results[0];
+          } else {
+            let canvas = frameCanvasRef.current;
+            if (!canvas) {
+              canvas = document.createElement("canvas");
+              frameCanvasRef.current = canvas;
+            }
+            const width = video.videoWidth;
+            const height = video.videoHeight;
+            if (width > 0 && height > 0) {
+              canvas.width = width;
+              canvas.height = height;
+              const context = canvas.getContext("2d", { willReadFrequently: true });
+              if (context) {
+                context.drawImage(video, 0, 0, width, height);
+                const frame = context.getImageData(0, 0, width, height);
+                const qr = jsQR(frame.data, width, height, {
+                  inversionAttempts: "attemptBoth",
+                });
+                if (qr) result = { rawValue: qr.data, format: "qr_code" };
+              }
+            }
+          }
 
           if (
             result?.rawValue &&
-            !scanned
+            !scanned &&
+            active
           ) {
             setScanned(true);
 
@@ -503,7 +532,7 @@ export default function ScannerScreen() {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #101c31;
+            background: #f1f1f1;
             border-radius: 22px;
           }
 
@@ -546,7 +575,7 @@ export default function ScannerScreen() {
             border: 0;
             border-radius: 16px;
             margin-top: 24px;
-            color: #171717;
+            color: #ffffff;
             font-size: 16px;
             font-weight: 800;
             cursor: pointer;
