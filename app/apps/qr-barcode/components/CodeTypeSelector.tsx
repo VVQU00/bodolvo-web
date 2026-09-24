@@ -122,9 +122,9 @@ function SelectorButton({
         .activeButton {
           background: linear-gradient(
             135deg,
-            #3b82f6 0%,
-            #2563eb 50%,
-            #1d4ed8 100%
+            #171717 0%,
+            #171717 50%,
+            #333333 100%
           );
         }
 
@@ -135,7 +135,7 @@ function SelectorButton({
         }
 
         .activeButtonText {
-          color: #ffffff;
+          color: #171717;
           font-size: 14px;
           font-weight: 800;
         }
@@ -148,7 +148,7 @@ function SelectorButton({
         }
 
         .webActiveIcon {
-          color: #ffffff;
+          color: #171717;
           font-size: 19px;
           font-weight: 900;
           line-height: 1;

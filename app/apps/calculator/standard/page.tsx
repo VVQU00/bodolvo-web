@@ -6,17 +6,17 @@ import { useMemo, useState } from "react";
 type Operator = "+" | "−" | "×" | "÷";
 
 const lightTheme = {
-  background: "#F4F7FB",
+  background: "#FFFFFF",
   surface: "#FFFFFF",
-  surfaceSecondary: "#EDF2F7",
+  surfaceSecondary: "#F6F6F6",
   card: "#FFFFFF",
-  cardPressed: "#E8EEF5",
-  text: "#101318",
-  textSecondary: "#5D6673",
-  textMuted: "#88919E",
-  border: "#DCE3EA",
-  primary: "#208AEF",
-  primarySoft: "#E6F4FE",
+  cardPressed: "#EEEEEE",
+  text: "#171717",
+  textSecondary: "#4B4B4B",
+  textMuted: "#626262",
+  border: "#D9D9D9",
+  primary: "#171717",
+  primarySoft: "#F5F5F5",
 };
 
 const darkTheme = {
@@ -29,7 +29,7 @@ const darkTheme = {
   textSecondary: "#AEB7C4",
   textMuted: "#788391",
   border: "#202833",
-  primary: "#208AEF",
+  primary: "#171717",
   primarySoft: "#102A43",
 };
 
@@ -42,7 +42,7 @@ export default function StandardCalculatorPage() {
 
   const [history, setHistory] = useState<string[]>([]);
 
-  const theme = darkTheme;
+  const theme = lightTheme;
 
   const displayText = useMemo(() => {
     if (display === "Error") return display;

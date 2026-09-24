@@ -6,19 +6,19 @@ import { useMemo, useState } from "react";
 type TermUnit = "years" | "months";
 
 const theme = {
-  background: "#07090D",
-  surface: "#0D1117",
-  surfaceSecondary: "#131922",
-  card: "#10151D",
-  text: "#F5F7FA",
-  textSecondary: "#AEB7C4",
-  textMuted: "#788391",
-  border: "#202833",
+  background: "#FFFFFF",
+  surface: "#FFFFFF",
+  surfaceSecondary: "#F7F7F7",
+  card: "#F7F7F7",
+  text: "#171717",
+  textSecondary: "#555555",
+  textMuted: "#666666",
+  border: "#D9D9D9",
   divider: "#1B222C",
-  inputBackground: "#0B1016",
-  inputBorder: "#202833",
-  primary: "#208AEF",
-  primarySoft: "#102A43",
+  inputBackground: "#FFFFFF",
+  inputBorder: "#D9D9D9",
+  primary: "#171717",
+  primarySoft: "#F3F3F3",
   danger: "#F05252",
 };
 

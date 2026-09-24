@@ -17,7 +17,7 @@ export default function QRBarcodeLayout({
         <style>{`
           .qrBarcodeApp {
             min-height: 100dvh;
-            background: #07090d;
+            background: #ffffff; color: #171717;
           }
         `}</style>
       </div>

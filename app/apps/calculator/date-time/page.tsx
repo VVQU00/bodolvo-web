@@ -6,7 +6,7 @@ import { useMemo, useState } from "react";
 type Mode = "difference" | "add";
 
 const theme = {
-  background: "#07090D",
+  background: "#FFFFFF",
   surface: "#0F1319",
   card: "#10141B",
 
@@ -20,8 +20,8 @@ const theme = {
   inputBackground: "#0B0F15",
   inputBorder: "#202733",
 
-  primary: "#208AEF",
-  primarySoft: "#102A43",
+  primary: "#171717",
+  primarySoft: "#F3F3F3",
 
   dangerBackground: "#211317",
   dangerBorder: "#442128",
@@ -288,7 +288,7 @@ export default function DateTimeCalculatorPage() {
           >
             <span
               style={{
-                color: "#208AEF",
+                color: "#171717",
                 fontSize: 8,
                 fontWeight: 900,
                 letterSpacing: 1.2,
@@ -868,7 +868,7 @@ export default function DateTimeCalculatorPage() {
                     backgroundColor:
                       theme.primarySoft,
                     border:
-                      "1px solid #208AEF",
+                      "1px solid #171717",
                     display: "flex",
                     alignItems:
                       "center",
@@ -1082,7 +1082,7 @@ function ModeButton({
         minHeight: 48,
         borderRadius: 14,
         border: active
-          ? "1px solid #208AEF"
+          ? "1px solid #171717"
           : "1px solid transparent",
 
         backgroundColor: active
@@ -1090,7 +1090,7 @@ function ModeButton({
           : "transparent",
 
         color: active
-          ? "#208AEF"
+          ? "#171717"
           : "#687180",
 
         fontSize: 11,
@@ -1128,7 +1128,7 @@ function DateField({
     >
       <span
         style={{
-          color: "#208AEF",
+          color: "#171717",
           fontSize: 18,
           marginRight: 11,
         }}
@@ -1612,13 +1612,13 @@ const heroResultStyle = {
   backgroundColor:
     "#11151D",
   border:
-    "1px solid #208AEF",
+    "1px solid #171717",
   borderRadius: 26,
   padding: 24,
 } as const;
 
 const heroEyebrowStyle = {
-  color: "#208AEF",
+  color: "#171717",
   fontSize: 9,
   fontWeight: 900,
   letterSpacing: 2,
@@ -1626,7 +1626,7 @@ const heroEyebrowStyle = {
 } as const;
 
 const heroUnitStyle = {
-  color: "#208AEF",
+  color: "#171717",
   fontSize: 15,
   fontWeight: 800,
   marginTop: 1,

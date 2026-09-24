@@ -44,13 +44,13 @@ export default function SettingsButton() {
         }
 
         .text {
-          color: #ffffff;
+          color: #171717;
           font-size: 14px;
           font-weight: 800;
         }
 
         .webIcon {
-          color: #ffffff;
+          color: #171717;
           font-size: 20px;
           font-weight: 800;
           line-height: 1;

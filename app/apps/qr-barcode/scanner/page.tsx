@@ -408,12 +408,12 @@ export default function ScannerScreen() {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #07090d;
+            background: #ffffff;
             padding: 0 22px;
           }
 
           .permissionText {
-            color: #8b95a7;
+            color: #555555;
             font-size: 14px;
             line-height: 21px;
             text-align: center;
@@ -481,7 +481,7 @@ export default function ScannerScreen() {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #07090d;
+            background: #ffffff;
             padding: 0 22px;
           }
 
@@ -491,8 +491,8 @@ export default function ScannerScreen() {
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: #10141c;
-            border: 1px solid #28303d;
+            background: #ffffff;
+            border: 1px solid #d9d9d9;
             border-radius: 24px;
             padding: 25px;
           }
@@ -508,20 +508,20 @@ export default function ScannerScreen() {
           }
 
           .webScannerIcon {
-            color: #60a5fa;
+            color: #171717;
             font-size: 32px;
             font-weight: 900;
           }
 
           .permissionTitle {
-            color: #ffffff;
+            color: #171717;
             font-size: 22px;
             font-weight: 900;
             margin: 18px 0 0;
           }
 
           .permissionText {
-            color: #8b95a7;
+            color: #555555;
             font-size: 14px;
             line-height: 21px;
             text-align: center;
@@ -542,11 +542,11 @@ export default function ScannerScreen() {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #2563eb;
+            background: #171717;
             border: 0;
             border-radius: 16px;
             margin-top: 24px;
-            color: #ffffff;
+            color: #171717;
             font-size: 16px;
             font-weight: 800;
             cursor: pointer;
@@ -562,7 +562,7 @@ export default function ScannerScreen() {
             margin-top: 8px;
             background: transparent;
             border: 0;
-            color: #8b95a7;
+            color: #555555;
             font-size: 14px;
             font-weight: 700;
             cursor: pointer;
@@ -689,7 +689,7 @@ export default function ScannerScreen() {
           width: 100%;
           height: 100dvh;
           overflow: hidden;
-          background: #07090d;
+          background: #ffffff;
         }
 
         .camera {
@@ -698,7 +698,7 @@ export default function ScannerScreen() {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          background: #07090d;
+          background: #ffffff;
         }
 
         .overlay {
@@ -747,7 +747,7 @@ export default function ScannerScreen() {
         }
 
         .closeIcon {
-          color: #ffffff;
+          color: #171717;
           font-size: 34px;
           font-weight: 400;
           line-height: 36px;
@@ -770,7 +770,7 @@ export default function ScannerScreen() {
         }
 
         .brandLabel {
-          color: #60a5fa;
+          color: #171717;
           font-size: 9px;
           font-weight: 900;
           letter-spacing: 2px;
@@ -778,7 +778,7 @@ export default function ScannerScreen() {
         }
 
         .title {
-          color: #ffffff;
+          color: #171717;
           font-size: 18px;
           font-weight: 900;
         }
@@ -808,38 +808,38 @@ export default function ScannerScreen() {
           width: 58px;
           height: 58px;
           position: absolute;
-          border-color: #3b82f6;
+          border-color: #171717;
         }
 
         .topLeft {
           top: 0;
           left: 0;
-          border-top: 5px solid #3b82f6;
-          border-left: 5px solid #3b82f6;
+          border-top: 5px solid #171717;
+          border-left: 5px solid #171717;
           border-top-left-radius: 22px;
         }
 
         .topRight {
           top: 0;
           right: 0;
-          border-top: 5px solid #3b82f6;
-          border-right: 5px solid #3b82f6;
+          border-top: 5px solid #171717;
+          border-right: 5px solid #171717;
           border-top-right-radius: 22px;
         }
 
         .bottomLeft {
           bottom: 0;
           left: 0;
-          border-bottom: 5px solid #3b82f6;
-          border-left: 5px solid #3b82f6;
+          border-bottom: 5px solid #171717;
+          border-left: 5px solid #171717;
           border-bottom-left-radius: 22px;
         }
 
         .bottomRight {
           right: 0;
           bottom: 0;
-          border-right: 5px solid #3b82f6;
-          border-bottom: 5px solid #3b82f6;
+          border-right: 5px solid #171717;
+          border-bottom: 5px solid #171717;
           border-bottom-right-radius: 22px;
         }
 
@@ -862,7 +862,7 @@ export default function ScannerScreen() {
         .centerDot {
           width: 6px;
           height: 6px;
-          background: #60a5fa;
+          background: #171717;
           border-radius: 999px;
         }
 
@@ -887,7 +887,7 @@ export default function ScannerScreen() {
         }
 
         .instructions {
-          color: #ffffff;
+          color: #171717;
           font-size: 15px;
           font-weight: 800;
           margin: 0;
@@ -900,7 +900,7 @@ export default function ScannerScreen() {
         }
 
         .webInstructionIcon {
-          color: #60a5fa;
+          color: #171717;
           font-size: 21px;
           font-weight: 900;
         }

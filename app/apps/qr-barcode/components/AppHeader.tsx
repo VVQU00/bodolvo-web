@@ -49,20 +49,20 @@ export default function AppHeader() {
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: #2563eb;
+          background-color: #171717;
           border-radius: 16px;
           box-shadow: 0 6px 14px rgba(37, 99, 235, 0.35);
         }
 
         .webIcon {
-          color: #ffffff;
+          color: #171717;
           font-size: 28px;
           font-weight: 900;
           line-height: 30px;
         }
 
         .brand {
-          color: #ffffff;
+          color: #171717;
           font-size: 27px;
           font-weight: 900;
           letter-spacing: 2.2px;
@@ -70,7 +70,7 @@ export default function AppHeader() {
         }
 
         .productName {
-          color: #7c8aa0;
+          color: #555555;
           font-size: 14px;
           font-weight: 700;
           letter-spacing: 1.8px;
@@ -79,7 +79,7 @@ export default function AppHeader() {
         }
 
         .subtitle {
-          color: #8b95a7;
+          color: #555555;
           font-size: 14px;
           line-height: 21px;
           margin: 14px 0 0;
@@ -91,8 +91,8 @@ export default function AppHeader() {
           display: flex;
           flex-direction: row;
           align-items: center;
-          background-color: #10141c;
-          border: 1px solid #28303d;
+          background-color: #ffffff;
+          border: 1px solid #d9d9d9;
           padding: 7px 12px;
           border-radius: 999px;
           margin-top: 14px;

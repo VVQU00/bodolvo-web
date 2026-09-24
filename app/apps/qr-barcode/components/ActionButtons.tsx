@@ -126,14 +126,14 @@ export default function ActionButtons({
           border-radius: 17px;
           background: linear-gradient(
             135deg,
-            #3b82f6 0%,
-            #2563eb 50%,
-            #1d4ed8 100%
+            #171717 0%,
+            #171717 50%,
+            #333333 100%
           );
         }
 
         .primaryText {
-          color: #ffffff;
+          color: #171717;
           font-size: 16px;
           font-weight: 800;
         }
@@ -173,7 +173,7 @@ export default function ActionButtons({
         }
 
         .secondaryText {
-          color: #ffffff;
+          color: #171717;
           font-size: 15px;
           font-weight: 700;
         }
@@ -188,7 +188,7 @@ export default function ActionButtons({
         }
 
         .webIcon {
-          color: #ffffff;
+          color: #171717;
           font-size: 20px;
           font-weight: 900;
           line-height: 1;

@@ -141,7 +141,7 @@ export default function AboutScreen() {
               <AppIcon
                 name="warning"
                 size={20}
-                color="#FBBF24"
+                color="#171717"
               />
 
               <span className="noteTitle">
@@ -162,7 +162,7 @@ export default function AboutScreen() {
               <AppIcon
                 name="cube"
                 size={22}
-                color="#60A5FA"
+                color="#171717"
               />
             </div>
 
@@ -192,8 +192,8 @@ export default function AboutScreen() {
 
         .safeArea {
           min-height: 100dvh;
-          background: #07090d;
-          color: #ffffff;
+          background: #ffffff;
+          color: #171717;
           overflow-y: auto;
         }
 
@@ -219,8 +219,8 @@ export default function AboutScreen() {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: #10141c;
-          border: 1px solid #28303d;
+          background: #ffffff;
+          border: 1px solid #d9d9d9;
           border-radius: 15px;
           cursor: pointer;
         }
@@ -232,7 +232,7 @@ export default function AboutScreen() {
 
         .topTitle {
           flex: 1;
-          color: #ffffff;
+          color: #171717;
           font-size: 20px;
           font-weight: 900;
           text-align: center;
@@ -257,7 +257,7 @@ export default function AboutScreen() {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: #2563eb;
+          background: #171717;
           border-radius: 27px;
           box-shadow:
             0 9px 24px
@@ -265,7 +265,7 @@ export default function AboutScreen() {
         }
 
         .brandName {
-          color: #ffffff;
+          color: #171717;
           font-size: 30px;
           font-weight: 900;
           letter-spacing: 2.5px;
@@ -273,7 +273,7 @@ export default function AboutScreen() {
         }
 
         .appName {
-          color: #7c8aa0;
+          color: #555555;
           font-size: 15px;
           font-weight: 800;
           letter-spacing: 2px;
@@ -283,7 +283,7 @@ export default function AboutScreen() {
 
         .tagline {
           max-width: 330px;
-          color: #8b95a7;
+          color: #555555;
           font-size: 14px;
           line-height: 21px;
           text-align: center;
@@ -291,15 +291,15 @@ export default function AboutScreen() {
         }
 
         .versionBadge {
-          background: #10141c;
-          border: 1px solid #28303d;
+          background: #ffffff;
+          border: 1px solid #d9d9d9;
           border-radius: 999px;
           padding: 7px 12px;
           margin-top: 13px;
         }
 
         .versionText {
-          color: #60a5fa;
+          color: #171717;
           font-size: 11px;
           font-weight: 800;
         }
@@ -319,7 +319,7 @@ export default function AboutScreen() {
         }
 
         .noteTitle {
-          color: #fbbf24;
+          color: #171717;
           font-size: 14px;
           font-weight: 900;
         }
@@ -359,7 +359,7 @@ export default function AboutScreen() {
         }
 
         .bodolvoTitle {
-          color: #ffffff;
+          color: #171717;
           font-size: 14px;
           font-weight: 800;
           margin: 0;
@@ -373,7 +373,7 @@ export default function AboutScreen() {
         }
 
         .credit {
-          color: #596273;
+          color: #555555;
           font-size: 11px;
           font-weight: 700;
           text-align: center;
@@ -409,7 +409,7 @@ function InfoCard({
           <AppIcon
             name={icon}
             size={23}
-            color="#60A5FA"
+            color="#171717"
           />
         </div>
 
@@ -427,8 +427,8 @@ function InfoCard({
       <style jsx>{`
         .infoCard {
           display: flex;
-          background: #10141c;
-          border: 1px solid #28303d;
+          background: #ffffff;
+          border: 1px solid #d9d9d9;
           border-radius: 20px;
           padding: 15px;
           margin-bottom: 12px;

@@ -143,7 +143,7 @@ function getResultInfo(kind: ResultKind) {
       return {
         label: "Website",
         icon: "globe" as AppIconName,
-        color: "#60A5FA",
+        color: "#171717",
         actionLabel: "Open Link",
         actionIcon: "open" as AppIconName,
       };
@@ -1087,7 +1087,7 @@ export default function ScanResultScreen() {
             <AppIcon
               name="scan"
               size={20}
-              color="#60A5FA"
+              color="#171717"
             />
 
             <span className="scanAgainText">
@@ -1118,7 +1118,7 @@ export default function ScanResultScreen() {
 
         .safeArea {
           min-height: 100dvh;
-          background: #07090d;
+          background: #ffffff;
           overflow-y: auto;
         }
 
@@ -1144,8 +1144,8 @@ export default function ScanResultScreen() {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: #10141c;
-          border: 1px solid #28303d;
+          background: #ffffff;
+          border: 1px solid #d9d9d9;
           border-radius: 15px;
           cursor: pointer;
         }
@@ -1168,14 +1168,14 @@ export default function ScanResultScreen() {
         }
 
         .eyebrow {
-          color: #3b82f6;
+          color: #171717;
           font-size: 9px;
           font-weight: 900;
           letter-spacing: 1.7px;
         }
 
         .title {
-          color: #ffffff;
+          color: #171717;
           font-size: 24px;
           font-weight: 900;
           margin: 3px 0 0;
@@ -1197,7 +1197,7 @@ export default function ScanResultScreen() {
         }
 
         .successTitle {
-          color: #ffffff;
+          color: #171717;
           font-size: 25px;
           font-weight: 900;
           text-align: center;
@@ -1205,7 +1205,7 @@ export default function ScanResultScreen() {
         }
 
         .successSubtitle {
-          color: #8b95a7;
+          color: #555555;
           font-size: 13px;
           line-height: 20px;
           text-align: center;
@@ -1215,8 +1215,8 @@ export default function ScanResultScreen() {
         .typeCard {
           display: flex;
           align-items: center;
-          background: #10141c;
-          border: 1px solid #28303d;
+          background: #ffffff;
+          border: 1px solid #d9d9d9;
           border-radius: 20px;
           padding: 15px;
           margin-top: 28px;
@@ -1241,7 +1241,7 @@ export default function ScanResultScreen() {
         }
 
         .typeLabel {
-          color: #ffffff;
+          color: #171717;
           font-size: 16px;
           font-weight: 800;
           margin: 0;
@@ -1257,7 +1257,7 @@ export default function ScanResultScreen() {
 
         .valueCard {
           background: #0c1017;
-          border: 1px solid #28303d;
+          border: 1px solid #d9d9d9;
           border-radius: 20px;
           padding: 16px;
           margin-top: 12px;
@@ -1348,7 +1348,7 @@ export default function ScanResultScreen() {
         }
 
         .detailTitle {
-          color: #ffffff;
+          color: #171717;
           font-size: 18px;
           font-weight: 900;
           overflow-wrap: anywhere;
@@ -1378,7 +1378,7 @@ export default function ScanResultScreen() {
         }
 
         .actionButtonText {
-          color: #ffffff;
+          color: #171717;
           font-size: 13px;
           font-weight: 900;
         }
@@ -1397,7 +1397,7 @@ export default function ScanResultScreen() {
           align-items: center;
           justify-content: center;
           gap: 9px;
-          background: #2563eb;
+          background: #171717;
           border: 0;
           border-radius: 17px;
           margin-top: 18px;
@@ -1405,7 +1405,7 @@ export default function ScanResultScreen() {
         }
 
         .primaryButtonText {
-          color: #ffffff;
+          color: #171717;
           font-size: 15px;
           font-weight: 900;
         }
@@ -1423,14 +1423,14 @@ export default function ScanResultScreen() {
           align-items: center;
           justify-content: center;
           gap: 8px;
-          background: #10141c;
-          border: 1px solid #28303d;
+          background: #ffffff;
+          border: 1px solid #d9d9d9;
           border-radius: 16px;
           cursor: pointer;
         }
 
         .secondaryButtonText {
-          color: #ffffff;
+          color: #171717;
           font-size: 14px;
           font-weight: 800;
         }
@@ -1450,7 +1450,7 @@ export default function ScanResultScreen() {
         }
 
         .scanAgainText {
-          color: #60a5fa;
+          color: #171717;
           font-size: 14px;
           font-weight: 800;
         }
@@ -1527,8 +1527,8 @@ function DetailRow({
           min-height: 58px;
           display: flex;
           align-items: center;
-          background: #10141c;
-          border: 1px solid #28303d;
+          background: #ffffff;
+          border: 1px solid #d9d9d9;
           border-radius: 16px;
           padding: 10px 12px;
           margin-top: 8px;

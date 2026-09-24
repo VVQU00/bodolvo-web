@@ -6,17 +6,17 @@ import { useState } from "react";
 type Mode = "percentOf" | "change" | "whatPercent";
 
 const theme = {
-  background: "#07090D",
-  surface: "#0D1117",
-  card: "#10151D",
-  text: "#F5F7FA",
-  textSecondary: "#AEB7C4",
-  textMuted: "#788391",
-  border: "#202833",
-  inputBackground: "#0B1016",
-  inputBorder: "#202833",
-  primary: "#208AEF",
-  primarySoft: "#102A43",
+  background: "#FFFFFF",
+  surface: "#FFFFFF",
+  card: "#F7F7F7",
+  text: "#171717",
+  textSecondary: "#555555",
+  textMuted: "#666666",
+  border: "#D9D9D9",
+  inputBackground: "#FFFFFF",
+  inputBorder: "#D9D9D9",
+  primary: "#171717",
+  primarySoft: "#F3F3F3",
   danger: "#F05252",
 };
 

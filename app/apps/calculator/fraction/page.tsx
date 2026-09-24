@@ -11,23 +11,23 @@ type FractionValue = {
 };
 
 const theme = {
-  background: "#07090D",
-  surface: "#0D1117",
-  surfaceSecondary: "#131922",
-  card: "#10151D",
+  background: "#FFFFFF",
+  surface: "#FFFFFF",
+  surfaceSecondary: "#F7F7F7",
+  card: "#F7F7F7",
 
-  text: "#F5F7FA",
-  textSecondary: "#AEB7C4",
-  textMuted: "#788391",
+  text: "#171717",
+  textSecondary: "#555555",
+  textMuted: "#666666",
 
-  border: "#202833",
+  border: "#D9D9D9",
   divider: "#1B222C",
 
-  inputBackground: "#0B1016",
-  inputBorder: "#202833",
+  inputBackground: "#FFFFFF",
+  inputBorder: "#D9D9D9",
 
-  primary: "#208AEF",
-  primarySoft: "#102A43",
+  primary: "#171717",
+  primarySoft: "#F3F3F3",
 
   danger: "#F05252",
 };

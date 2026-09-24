@@ -141,7 +141,7 @@ const styles = `
   }
 
   .eyebrow {
-    color: #3b82f6;
+    color: #171717;
     font-size: 10px;
     font-weight: 900;
     letter-spacing: 1.3px;
@@ -225,7 +225,7 @@ const styles = `
   }
 
   .item:focus-visible {
-    outline: 2px solid #3b82f6;
+    outline: 2px solid #171717;
     outline-offset: 2px;
   }
 
@@ -288,7 +288,7 @@ const styles = `
   }
 
   .webItemIcon {
-    color: #60a5fa;
+    color: #171717;
     font-size: 21px;
     font-weight: 900;
     line-height: 24px;

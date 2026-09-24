@@ -628,7 +628,7 @@ export default function QRInput({
           min-width: 0;
           min-height: 62px;
           max-height: 130px;
-          color: #ffffff;
+          color: #171717;
           background: transparent;
           border: 0;
           outline: none;
@@ -672,13 +672,13 @@ export default function QRInput({
 
         .previewNotice {
           background-color: #101c31;
-          border: 1px solid #1d4ed8;
+          border: 1px solid #333333;
           border-radius: 14px;
           padding: 12px;
         }
 
         .previewNoticeLabel {
-          color: #60a5fa;
+          color: #171717;
           font-size: 9px;
           font-weight: 900;
           letter-spacing: 1.2px;
@@ -708,15 +708,15 @@ export default function QRInput({
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: #10141c;
-          border: 1px solid #28303d;
+          background-color: #ffffff;
+          border: 1px solid #d9d9d9;
           border-radius: 12px;
           cursor: pointer;
         }
 
         .securityButtonActive {
           background-color: #101c31;
-          border-color: #2563eb;
+          border-color: #171717;
         }
 
         .securityButtonText {
@@ -726,7 +726,7 @@ export default function QRInput({
         }
 
         .securityButtonTextActive {
-          color: #60a5fa;
+          color: #171717;
         }
 
         .hiddenRow {
@@ -735,7 +735,7 @@ export default function QRInput({
           flex-direction: row;
           align-items: center;
           gap: 10px;
-          background-color: #10141c;
+          background-color: #ffffff;
           border: 0;
           border-radius: 14px;
           padding: 12px;
@@ -755,12 +755,12 @@ export default function QRInput({
         }
 
         .checkboxActive {
-          background-color: #2563eb;
-          border-color: #2563eb;
+          background-color: #171717;
+          border-color: #171717;
         }
 
         .checkboxCheck {
-          color: #ffffff;
+          color: #171717;
           font-size: 14px;
           font-weight: 900;
         }
@@ -811,7 +811,7 @@ export default function QRInput({
         }
 
         .webFlashIcon {
-          color: #3b82f6;
+          color: #171717;
           font-size: 14px;
           line-height: 16px;
         }
@@ -882,8 +882,8 @@ function ModeButton({
         }
 
         .modeButtonActive {
-          background-color: #2563eb;
-          border-color: #3b82f6;
+          background-color: #171717;
+          border-color: #171717;
         }
 
         .modeText {
@@ -893,7 +893,7 @@ function ModeButton({
         }
 
         .modeTextActive {
-          color: #ffffff;
+          color: #171717;
         }
 
         .modeWebIcon {
@@ -903,7 +903,7 @@ function ModeButton({
         }
 
         .modeWebIconActive {
-          color: #ffffff;
+          color: #171717;
         }
       `}</style>
     </button>
@@ -995,9 +995,9 @@ function Field({
         .fieldInput {
           width: 100%;
           min-height: 48px;
-          color: #ffffff;
-          background-color: #10141c;
-          border: 1px solid #28303d;
+          color: #171717;
+          background-color: #ffffff;
+          border: 1px solid #d9d9d9;
           border-radius: 14px;
           padding: 0 13px;
           font-size: 14px;
@@ -1010,7 +1010,7 @@ function Field({
         }
 
         .fieldInput:focus {
-          border-color: #3b82f6;
+          border-color: #171717;
         }
 
         .fieldInputMultiline {

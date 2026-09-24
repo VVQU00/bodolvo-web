@@ -294,7 +294,7 @@ export default function AppLockGate({
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: #07090d;
+            background: #ffffff;
             padding: 0 22px;
           }
 
@@ -303,7 +303,7 @@ export default function AppLockGate({
             height: 36px;
             border: 4px solid
               rgba(59, 130, 246, 0.2);
-            border-top-color: #3b82f6;
+            border-top-color: #171717;
             border-radius: 999px;
             animation: spin 0.8s linear
               infinite;
@@ -374,7 +374,7 @@ export default function AppLockGate({
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #07090d;
+            background: #ffffff;
             padding: 0 22px;
           }
 
@@ -384,8 +384,8 @@ export default function AppLockGate({
             display: flex;
             flex-direction: column;
             align-items: center;
-            background: #10141c;
-            border: 1px solid #28303d;
+            background: #ffffff;
+            border: 1px solid #d9d9d9;
             border-radius: 26px;
             padding: 30px 24px;
           }
@@ -397,18 +397,18 @@ export default function AppLockGate({
             align-items: center;
             justify-content: center;
             background: #101c31;
-            border: 1px solid #1d4ed8;
+            border: 1px solid #333333;
             border-radius: 24px;
           }
 
           .lockIconText {
-            color: #60a5fa;
+            color: #171717;
             font-size: 34px;
             line-height: 38px;
           }
 
           .brand {
-            color: #3b82f6;
+            color: #171717;
             font-size: 10px;
             font-weight: 900;
             letter-spacing: 1.8px;
@@ -416,14 +416,14 @@ export default function AppLockGate({
           }
 
           .title {
-            color: #ffffff;
+            color: #171717;
             font-size: 26px;
             font-weight: 900;
             margin: 5px 0 0;
           }
 
           .description {
-            color: #8b95a7;
+            color: #555555;
             font-size: 13px;
             line-height: 20px;
             text-align: center;
@@ -436,11 +436,11 @@ export default function AppLockGate({
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #2563eb;
+            background: #171717;
             border: 0;
             border-radius: 16px;
             margin-top: 24px;
-            color: #ffffff;
+            color: #171717;
             font-size: 16px;
             font-weight: 900;
             font-family: inherit;
@@ -453,7 +453,7 @@ export default function AppLockGate({
           }
 
           .privacyText {
-            color: #596273;
+            color: #555555;
             font-size: 11px;
             line-height: 17px;
             text-align: center;

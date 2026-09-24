@@ -234,7 +234,7 @@ export default function ScanButton() {
 
         .primaryButton {
           min-height: 72px;
-          background-color: #10141c;
+          background-color: #ffffff;
           border: 1px solid #2f6fed;
           border-radius: 18px;
           padding: 12px 14px;
@@ -243,7 +243,7 @@ export default function ScanButton() {
         .secondaryButton {
           min-height: 68px;
           background-color: #0c1017;
-          border: 1px solid #28303d;
+          border: 1px solid #d9d9d9;
           border-radius: 18px;
           padding: 11px 14px;
         }
@@ -266,7 +266,7 @@ export default function ScanButton() {
           display: flex;
           align-items: center;
           justify-content: center;
-          background-color: #2563eb;
+          background-color: #171717;
           border-radius: 14px;
           margin-right: 12px;
         }
@@ -291,13 +291,13 @@ export default function ScanButton() {
         }
 
         .primaryTitle {
-          color: #ffffff;
+          color: #171717;
           font-size: 15px;
           font-weight: 900;
         }
 
         .primarySubtitle {
-          color: #8b95a7;
+          color: #555555;
           font-size: 11px;
           line-height: 16px;
           margin-top: 3px;
@@ -317,13 +317,13 @@ export default function ScanButton() {
         }
 
         .webPrimaryIcon {
-          color: #ffffff;
+          color: #171717;
           font-size: 24px;
           font-weight: 900;
         }
 
         .webSecondaryIcon {
-          color: #60a5fa;
+          color: #171717;
           font-size: 21px;
           font-weight: 800;
         }

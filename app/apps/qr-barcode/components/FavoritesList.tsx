@@ -137,7 +137,7 @@ const styles = `
   }
 
   .eyebrow {
-    color: #fbbf24;
+    color: #171717;
     font-size: 10px;
     font-weight: 900;
     letter-spacing: 1.3px;
@@ -175,7 +175,7 @@ const styles = `
   }
 
   .emptyTitle {
-    color: #ffffff;
+    color: #171717;
     font-size: 15px;
     font-weight: 800;
     margin-top: 10px;
@@ -212,7 +212,7 @@ const styles = `
     height: 42px;
     flex: 0 0 42px;
     border-radius: 14px;
-    background-color: #332701;
+    background-color: #f5f5f5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -220,7 +220,7 @@ const styles = `
   }
 
   .itemStar {
-    color: #fbbf24;
+    color: #171717;
     font-size: 20px;
     line-height: 1;
   }
@@ -265,7 +265,7 @@ const styles = `
   }
 
   .webStar {
-    color: #fbbf24;
+    color: #171717;
     font-size: 28px;
     line-height: 31px;
   }

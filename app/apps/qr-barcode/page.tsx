@@ -492,7 +492,7 @@ export default function HomeScreen() {
         .safeArea {
           width: 100%;
           min-height: 100vh;
-          background-color: #07090d;
+          background-color: #ffffff;
         }
 
         .scrollContent {
@@ -595,8 +595,8 @@ export default function HomeScreen() {
           align-items: center;
           justify-content: center;
           gap: 9px;
-          background-color: #10141c;
-          border: 1px solid #28303d;
+          background-color: #ffffff;
+          border: 1px solid #d9d9d9;
           border-radius: 16px;
           margin-top: 12px;
           padding: 0 16px;
@@ -616,43 +616,43 @@ export default function HomeScreen() {
         }
 
         .favoriteButtonActive {
-          background-color: #332701;
-          border-color: #a16207;
+          background-color: #f5f5f5;
+          border-color: #d9d9d9;
         }
 
         .favoriteButtonText {
-          color: #ffffff;
+          color: #171717;
           font-size: 15px;
           font-weight: 800;
         }
 
         .favoriteButtonTextActive {
-          color: #fbbf24;
+          color: #171717;
         }
 
         .webStar {
-          color: #ffffff;
+          color: #171717;
           font-size: 22px;
           line-height: 24px;
         }
 
         .webStarActive {
-          color: #fbbf24;
+          color: #171717;
         }
 
         .privacy {
-          color: #596273;
+          color: #555555;
           font-size: 12px;
           text-align: center;
           margin: 24px 0 0;
         }
 
         .fadeInDown {
-          animation: fadeInDown 500ms ease both;
+          animation: none;
         }
 
         .fadeInUp {
-          animation: fadeInUp 450ms ease both;
+          animation: none;
         }
 
         .delay100 {
@@ -668,7 +668,7 @@ export default function HomeScreen() {
         }
 
         .fadePrivacy {
-          animation: fadeIn 400ms ease 550ms both;
+          animation: none;
         }
 
         @keyframes fadeIn {
@@ -722,12 +722,7 @@ export default function HomeScreen() {
       `}</style>
 
       <style jsx global>{`
-        html,
-        body {
-          margin: 0;
-          padding: 0;
-          background-color: #07090d;
-        }
+        .qrBarcodeApp { background: #ffffff; }
 
         * {
           box-sizing: border-box;

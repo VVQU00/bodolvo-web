@@ -334,8 +334,8 @@ export default function SettingsScreen() {
 
         .safeArea {
           min-height: 100dvh;
-          background: #07090d;
-          color: #ffffff;
+          background: #ffffff;
+          color: #171717;
           overflow-y: auto;
         }
 
@@ -362,8 +362,8 @@ export default function SettingsScreen() {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: #10141c;
-          border: 1px solid #28303d;
+          background: #ffffff;
+          border: 1px solid #d9d9d9;
           border-radius: 15px;
           cursor: pointer;
         }
@@ -383,14 +383,14 @@ export default function SettingsScreen() {
         }
 
         .eyebrow {
-          color: #3b82f6;
+          color: #171717;
           font-size: 9px;
           font-weight: 900;
           letter-spacing: 1.6px;
         }
 
         .title {
-          color: #ffffff;
+          color: #171717;
           font-size: 25px;
           font-weight: 900;
           margin: 3px 0 0;
@@ -413,8 +413,8 @@ export default function SettingsScreen() {
         }
 
         .card {
-          background: #10141c;
-          border: 1px solid #28303d;
+          background: #ffffff;
+          border: 1px solid #d9d9d9;
           border-radius: 22px;
           padding: 16px;
         }
@@ -480,7 +480,7 @@ export default function SettingsScreen() {
           flex-shrink: 0;
           position: relative;
           padding: 0;
-          background: #28303d;
+          background: #d9d9d9;
           border: 0;
           border-radius: 999px;
           cursor: pointer;
@@ -490,7 +490,7 @@ export default function SettingsScreen() {
         }
 
         .switchEnabled {
-          background: #2563eb;
+          background: #171717;
         }
 
         .switch:disabled {
@@ -518,7 +518,7 @@ export default function SettingsScreen() {
           align-items: flex-start;
           gap: 9px;
           background: #0c1017;
-          border: 1px solid #28303d;
+          border: 1px solid #d9d9d9;
           border-radius: 16px;
           padding: 13px;
           margin-top: 16px;
@@ -553,8 +553,8 @@ export default function SettingsScreen() {
           display: flex;
           align-items: center;
           text-align: left;
-          background: #10141c;
-          border: 1px solid #28303d;
+          background: #ffffff;
+          border: 1px solid #d9d9d9;
           border-radius: 20px;
           padding: 14px;
           cursor: pointer;
@@ -566,26 +566,26 @@ export default function SettingsScreen() {
         }
 
         .footer {
-          color: #596273;
+          color: #555555;
           font-size: 12px;
           text-align: center;
           margin: 8px 0 0;
         }
 
         .webBack {
-          color: #ffffff;
+          color: #171717;
           font-size: 34px;
           line-height: 34px;
         }
 
         .webBlueIcon {
-          color: #60a5fa;
+          color: #171717;
           font-size: 22px;
           font-weight: 900;
         }
 
         .webLockIcon {
-          color: #60a5fa;
+          color: #171717;
           font-size: 24px;
         }
 
@@ -702,7 +702,7 @@ function OptionButton({
           display: flex;
           align-items: center;
           background: #0c1017;
-          border: 1px solid #28303d;
+          border: 1px solid #d9d9d9;
           border-radius: 17px;
           padding: 11px 12px;
           text-align: left;
@@ -717,7 +717,7 @@ function OptionButton({
 
         .selectedOption {
           background: #101c31;
-          border-color: #2563eb;
+          border-color: #171717;
         }
 
         .optionIcon {
@@ -733,7 +733,7 @@ function OptionButton({
         }
 
         .selectedOptionIcon {
-          background: #2563eb;
+          background: #171717;
         }
 
         .optionText {
@@ -749,7 +749,7 @@ function OptionButton({
         }
 
         .selectedOptionLabel {
-          color: #ffffff;
+          color: #171717;
         }
 
         .optionDescription {
@@ -765,7 +765,7 @@ function OptionButton({
         }
 
         .webOptionIconSelected {
-          color: #ffffff;
+          color: #171717;
         }
 
         .webRadio {
@@ -776,7 +776,7 @@ function OptionButton({
         }
 
         .webRadioSelected {
-          color: #3b82f6;
+          color: #171717;
         }
       `}</style>
     </>

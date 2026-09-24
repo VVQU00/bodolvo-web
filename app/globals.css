@@ -37,3 +37,77 @@ body { margin: 0; font-family: Arial, Helvetica, sans-serif; }
 .help-section { max-width: 760px; padding-bottom: 40px; }
 .help-section h2 { margin: 28px 0 8px; font-size: 1.15rem; line-height: 1.35; }
 .help-section p { margin: 0; color: #4b4b4b; line-height: 1.65; }
+
+
+/* Unified Bodolvo app and tool presentation. Scoped to /apps; tool logic is untouched. */
+.bodolvo-apps { min-height: 100vh; display: flex; flex-direction: column; background: #fff; color: #171717; font: 16px/1.5 Arial, Helvetica, sans-serif; }
+.bodolvo-apps *, .bodolvo-apps *::before, .bodolvo-apps *::after { box-sizing: border-box; }
+.bodolvo-apps > .app-page-content { flex: 1; min-width: 0; }
+.bodolvo-apps > .site-header, .bodolvo-apps > .site-footer { position: relative; z-index: 20; background: #fff; color: #171717; }
+.bodolvo-apps .site-nav a, .bodolvo-apps .site-brand, .bodolvo-apps .site-footer a { color: #171717; }
+.bodolvo-apps .tool-page { padding-block: 28px 60px; }
+.bodolvo-apps .tool-breadcrumb a { color: #333; font-size: .9rem; text-decoration: underline; }
+.bodolvo-apps .tool-page h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); line-height: 1.2; font-weight: 700; margin: 18px 0 10px; letter-spacing: normal; }
+.bodolvo-apps .tool-description { max-width: 740px; margin: 0 0 22px; color: #4b4b4b; }
+.bodolvo-apps .tool-workspace { padding: 20px; border: 1px solid #d9d9d9; border-radius: 6px; background: #fff; min-width: 0; }
+.bodolvo-apps .tool-note { font-size: .83rem; color: #555; margin-top: 12px; }
+/* Translate legacy utility colors to the same neutral, high-contrast light appearance. */
+.bodolvo-apps .tool-workspace :is([class*="text-white"], [class*="text-violet"], [class*="text-amber"], [class*="text-slate"], [class*="text-zinc"]) { color: #252525 !important; }
+.bodolvo-apps .tool-workspace :is([class*="bg-white/"], [class*="bg-black/"], [class*="bg-[#"], [class*="bg-violet"], [class*="bg-neutral"], [class*="bg-slate"], [class*="bg-zinc"], [class*="bg-gradient"], [class*="bg-[radial"]) { background: #f8f8f8 !important; background-image: none !important; }
+.bodolvo-apps .tool-workspace :is([class*="border-white"], [class*="border-violet"], [class*="border-slate"], [class*="border-zinc"]) { border-color: #d5d5d5 !important; }
+.bodolvo-apps .tool-workspace :is([class*="rounded-2xl"], [class*="rounded-xl"], [class*="rounded-lg"]) { border-radius: 6px !important; }
+.bodolvo-apps .tool-workspace :is(button, input, select, textarea) { font: inherit; }
+.bodolvo-apps .tool-workspace :is(button, select, input, textarea):not([type="checkbox"]):not([type="radio"]):not([type="range"]) { border-radius: 5px; }
+.bodolvo-apps .tool-workspace button:not(:disabled) { cursor: pointer; }
+.bodolvo-apps .tool-workspace :is(input, select, textarea) { background: #fff !important; color: #171717 !important; border-color: #a9a9a9 !important; }
+.bodolvo-apps .tool-workspace :is(button, a):focus-visible, .bodolvo-apps :is(input, select, textarea):focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }
+/* Plain form controls and predictable surfaces on standalone app pages. */
+.bodolvo-apps .app-page-content > main { max-width: 1100px; margin-inline: auto; }
+.bodolvo-apps .app-page-content > main:not(.tool-page) { min-height: 0; }
+.bodolvo-apps .app-page-content > main:not(.tool-page) :is([class*="backdrop-blur"], [class*="shadow-[0_"]) { backdrop-filter: none !important; box-shadow: none !important; }
+@media (max-width: 600px) { .bodolvo-apps .tool-page { padding-block: 18px 36px; } .bodolvo-apps .tool-workspace { padding: 14px; } }
+@media (prefers-reduced-motion: reduce) { .bodolvo-apps * { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
+
+/* Unified Bodolvo app and tool presentation. Scoped to /apps; tool logic is untouched. */
+.bodolvo-apps { min-height: 100vh; display: flex; flex-direction: column; background: #fff; color: #171717; font: 16px/1.5 Arial, Helvetica, sans-serif; }
+.bodolvo-apps *, .bodolvo-apps *::before, .bodolvo-apps *::after { box-sizing: border-box; }
+.bodolvo-apps > .app-page-content { flex: 1; min-width: 0; }
+.bodolvo-apps > .site-header, .bodolvo-apps > .site-footer { position: relative; z-index: 20; background: #fff; color: #171717; }
+.bodolvo-apps .site-nav a, .bodolvo-apps .site-brand, .bodolvo-apps .site-footer a { color: #171717; }
+.bodolvo-apps .tool-page { padding-block: 28px 60px; }
+.bodolvo-apps .tool-breadcrumb a { color: #333; font-size: .9rem; text-decoration: underline; }
+.bodolvo-apps .tool-page h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); line-height: 1.2; font-weight: 700; margin: 18px 0 10px; letter-spacing: normal; }
+.bodolvo-apps .tool-description { max-width: 740px; margin: 0 0 22px; color: #4b4b4b; }
+.bodolvo-apps .tool-workspace { padding: 20px; border: 1px solid #d9d9d9; border-radius: 6px; background: #fff; min-width: 0; }
+.bodolvo-apps .tool-note { font-size: .83rem; color: #555; margin-top: 12px; }
+/* Translate legacy utility colors to the same neutral, high-contrast light appearance. */
+.bodolvo-apps .tool-workspace :is([class*="text-white"], [class*="text-violet"], [class*="text-amber"], [class*="text-slate"], [class*="text-zinc"]) { color: #252525 !important; }
+.bodolvo-apps .tool-workspace :is([class*="bg-white/"], [class*="bg-black/"], [class*="bg-[#"], [class*="bg-violet"], [class*="bg-neutral"], [class*="bg-slate"], [class*="bg-zinc"], [class*="bg-gradient"], [class*="bg-[radial"]) { background: #f8f8f8 !important; background-image: none !important; }
+.bodolvo-apps .tool-workspace :is([class*="border-white"], [class*="border-violet"], [class*="border-slate"], [class*="border-zinc"]) { border-color: #d5d5d5 !important; }
+.bodolvo-apps .tool-workspace :is([class*="rounded-2xl"], [class*="rounded-xl"], [class*="rounded-lg"]) { border-radius: 6px !important; }
+.bodolvo-apps .tool-workspace :is(button, input, select, textarea) { font: inherit; }
+.bodolvo-apps .tool-workspace :is(button, select, input, textarea):not([type="checkbox"]):not([type="radio"]):not([type="range"]) { border-radius: 5px; }
+.bodolvo-apps .tool-workspace button:not(:disabled) { cursor: pointer; }
+.bodolvo-apps .tool-workspace :is(input, select, textarea) { background: #fff !important; color: #171717 !important; border-color: #a9a9a9 !important; }
+.bodolvo-apps .tool-workspace :is(button, a):focus-visible, .bodolvo-apps :is(input, select, textarea):focus-visible { outline: 3px solid #2563eb; outline-offset: 2px; }
+/* Plain form controls and predictable surfaces on standalone app pages. */
+.bodolvo-apps .app-page-content > main { max-width: 1100px; margin-inline: auto; }
+.bodolvo-apps .app-page-content > main:not(.tool-page) { min-height: 0; }
+.bodolvo-apps .app-page-content > main:not(.tool-page) :is([class*="backdrop-blur"], [class*="shadow-[0_"]) { backdrop-filter: none !important; box-shadow: none !important; }
+@media (max-width: 600px) { .bodolvo-apps .tool-page { padding-block: 18px 36px; } .bodolvo-apps .tool-workspace { padding: 14px; } }
+@media (prefers-reduced-motion: reduce) { .bodolvo-apps * { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
+/* Bodolvo unified calculator and QR layouts; all processing logic remains unchanged. */
+.calculator-directory { padding-block: 32px 64px; }
+.calculator-directory h1 { font-size: 2rem; margin: 14px 0 6px; }
+.calculator-directory .site-section { padding-block: 18px; }
+.calculator-directory .site-section h2 { font-size: 1.25rem; margin-bottom: 16px; }
+.calculator-directory .directory-item { min-height: 150px; }
+.qrBarcodeApp, .qrBarcodeApp main { background: #fff !important; color: #171717; }
+.qrBarcodeApp :is(button, input, select, textarea) { font-family: Arial, Helvetica, sans-serif; }
+.qrBarcodeApp :is([class*="badge"], [class*="Badge"]) { box-shadow: none !important; }
+.qrBarcodeApp :is([class*="Card"], [class*="card"], [class*="Button"], [class*="button"]) { box-shadow: none !important; }
+.qrBarcodeApp :is(input,textarea,select) { background: #fff !important; color: #171717 !important; }
+.qrBarcodeApp :is(button,a,input,select,textarea):focus-visible { outline: 2px solid #171717; outline-offset: 2px; }
+@media (max-width: 600px) { .calculator-directory { padding-block: 20px 38px; } }

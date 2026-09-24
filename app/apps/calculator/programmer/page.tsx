@@ -25,20 +25,20 @@ const MAX_SAFE_BIGINT = BigInt(Number.MAX_SAFE_INTEGER);
 const MIN_SAFE_BIGINT = BigInt(Number.MIN_SAFE_INTEGER);
 
 const theme = {
-  background: "#07090D",
-  surface: "#0D1117",
-  surfaceSecondary: "#131922",
-  card: "#10151D",
+  background: "#FFFFFF",
+  surface: "#FFFFFF",
+  surfaceSecondary: "#F7F7F7",
+  card: "#F7F7F7",
 
-  text: "#F5F7FA",
-  textSecondary: "#AEB7C4",
-  textMuted: "#788391",
+  text: "#171717",
+  textSecondary: "#555555",
+  textMuted: "#666666",
 
-  border: "#202833",
+  border: "#D9D9D9",
   divider: "#1B222C",
 
-  primary: "#208AEF",
-  primarySoft: "#102A43",
+  primary: "#171717",
+  primarySoft: "#F3F3F3",
 };
 
 export default function ProgrammerCalculatorPage() {
