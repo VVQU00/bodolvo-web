@@ -159,7 +159,7 @@ export default function MediaUploader({
           {
             method: "POST",
             body: formData,
-            headers: hubHeaders(),
+            headers: await hubHeaders(),
           }
         );
 

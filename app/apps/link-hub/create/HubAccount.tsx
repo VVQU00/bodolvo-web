@@ -18,10 +18,10 @@ export default function HubAccount() {
         method: "POST", headers: { apikey: anon, "Content-Type": "application/json" },
         body: JSON.stringify({email, password}),
       });
-      const result = await response.json() as {access_token?:string; expires_in?:number; msg?:string; error_description?:string};
+      const result = await response.json() as {access_token?:string; expires_in?:number; refresh_token?:string; msg?:string; error_description?:string};
       if (!response.ok) throw new Error(result.msg || result.error_description || "Could not sign in.");
       if (result.access_token && result.expires_in) {
-        saveHubSession(result.access_token, result.expires_in);
+        saveHubSession(result.access_token, result.expires_in, result.refresh_token);
         setSignedIn(true); setPassword(""); setMessage("Signed in. You can publish and manage your Link Hub.");
       } else setMessage("Check your email to confirm your account, then sign in.");
     } catch(e) { setMessage(e instanceof Error ? e.message : "Could not sign in."); }

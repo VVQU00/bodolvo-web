@@ -529,7 +529,7 @@ export default function CreateLinkHubPage() {
           {
             method: "GET",
             cache: "no-store",
-            headers: hubHeaders(),
+            headers: await hubHeaders(),
           }
         );
 
@@ -1108,7 +1108,7 @@ export default function CreateLinkHubPage() {
         {
           method: "POST",
           body: formData,
-          headers: hubHeaders(),
+          headers: await hubHeaders(),
         }
       );
 
@@ -1199,7 +1199,7 @@ export default function CreateLinkHubPage() {
           headers: {
             "Content-Type":
               "application/json",
-            ...hubHeaders(),
+            ...await hubHeaders(),
           },
           body: JSON.stringify({
             state: editor,
