@@ -1,6 +1,6 @@
-import { hubHeaders } from "./hubSession";
-"use client";
+﻿"use client";
 
+import { hubHeaders } from "./hubSession";
 import {
   useRef,
   useState,
@@ -335,3 +335,4 @@ export default function MediaUploader({
     </div>
   );
 }
+
