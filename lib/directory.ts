@@ -12,10 +12,10 @@ export const toolItems: DirectoryItem[] = toolCatalog
     title: tool.name, description: tool.description, href: `/apps/${tool.slug}`, category: "Tools", note: tool.status,
   }));
 export const productItems: DirectoryItem[] = [
-  { title: "Bodolvo Live", description: "Live social and creator platform.", category: "Products", note: "In development. Public app not available here yet." },
+  { title: "Bodolvo Live", description: "Live social and creator platform.", href: "/live", category: "Products", note: "In development; view the current product page." },
   { title: "Bodolvo Notes", description: "Writing and organizing ideas.", category: "Products", note: "Separate app; no verified public URL in this project." },
   { title: "Bodolvo Whiteboard", description: "Drawing and collaboration.", category: "Products", note: "Separate desktop app; no download bundled here." },
   { title: "Bodolvo System Center", description: "Computer monitoring and diagnostics.", category: "Products", note: "Separate desktop app; no download bundled here." },
   { title: "Bodolvo Recall", description: "Capture and revisit information.", category: "Products", note: "In development." },
-  { title: "Bodolvo Link Hub", description: "A personalized link page.", category: "Products", note: "Preview only; publishing depends on a separately configured service." },
+  { title: "Bodolvo Link Hub", description: "Create and manage a personalized link page.", href: "/apps/link-hub", category: "Products" },
 ];
